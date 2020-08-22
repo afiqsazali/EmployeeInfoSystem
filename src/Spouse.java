@@ -1,9 +1,8 @@
 public class Spouse {
 
-		String spouseName, spouseEmployer;
-		int spouseNumber;
+		String spouseName, spouseEmployer, spouseNumber;
 
-		public Spouse(String spouseName, String spouseEmployer, int spouseNumber) {
+		public Spouse(String spouseName, String spouseEmployer, String spouseNumber) {
 
 				this.spouseName = spouseName;
 				this.spouseEmployer = spouseEmployer;
@@ -26,11 +25,11 @@ public class Spouse {
 				this.spouseEmployer = spouseEmployer;
 		}
 
-		public int getSpouseNumber() {
+		public String getSpouseNumber() {
 				return spouseNumber;
 		}
 
-		public void setSpouseNumber(int spouseNumber) {
+		public void setSpouseNumber(String spouseNumber) {
 				this.spouseNumber = spouseNumber;
 		}
 

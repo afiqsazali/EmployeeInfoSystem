@@ -2,9 +2,7 @@ import java.util.Scanner;
 
 public class EmployeeList {
 
-    final int MAX = 400;
-    EmployeeData[] employeelist = new EmployeeData[MAX];
-    int employeeCount = 0;
+    LinkedList employeelist = new LinkedList();
 
     public void addEmployee() {
 
@@ -50,17 +48,27 @@ public class EmployeeList {
         String spouseEmployer = sc.nextLine();
 
         System.out.print("Enter the spouse number ");
-        int spouseNumber = sc.nextInt();
+        String spouseNumber = sc.nextLine();
 
         EmployeeData employee = new EmployeeData(firstname,lastname,street,aptUnit,city,state,zipCode,email,govID,bDay,martialSts,spouseName,spouseEmployer,spouseNumber);
 
-        employeelist[employeeCount++] = employee;
+        employeelist.insert(employee);
 
     }
 
     public void printEmployee() {
 
-        System.out.println("hello " + employeelist[0].name.getFullname());
+        Node current;
+
+        current = employeelist.head;
+        if (employeelist.head == null) {
+            System.out.println("Error, no contacts to be printed");
+        }
+
+        while(current != null) {
+            System.out.println(current.employee.name.getFullname());
+            current = current.next;
+        }
 
     }
 

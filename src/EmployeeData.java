@@ -9,7 +9,7 @@ public class EmployeeData {
     String martialSts;
     Spouse spouse;
 
-    public EmployeeData(String firstname,String lastname,String street,String aptUnit,String city, String state, String zipCode, String email,String govID,String bDay, String martialSts,String spouseName, String spouseEmployer, int spouseNumber) {
+    public EmployeeData(String firstname,String lastname,String street,String aptUnit,String city, String state, String zipCode, String email,String govID,String bDay, String martialSts,String spouseName, String spouseEmployer, String spouseNumber) {
 
       this.name = new Name(firstname,lastname);
       this.address = new Address(street,aptUnit,city,state,zipCode);
